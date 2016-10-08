@@ -1,5 +1,6 @@
 console.log("alive");
 // we can add music for start but not for now- lets get game funcitoning first
+
 var gameScore = 0;
 var scoreUpdate = document.getElementById('score');
 var jakeChoices = ["test1", "test2", "test3", "test4", "test5"];
@@ -9,7 +10,27 @@ var jakeChoices = ["test1", "test2", "test3", "test4", "test5"];
   console.log("button working");
 
   var randomise = Math.floor(Math.random() * jakeChoices.length);
-  var typeChoices = document.getElementById('happy').innerHTML=randomise;
+  var typeChoices = document.getElementById('happy').textContent= randomise;
+
+
+
+
+  setTimeout(function(){ console.log(typeChoices); }, 3000);
+
+
+
+//   function refreshData() {
+//
+//        x = 5;
+//
+//     console.log(randomise);
+//
+//     setTimeout(refreshData, x*1000);
+// }
+//
+// refreshData();
+
+
 
 
   document.addEventListener('keyup', function(e)  {
@@ -29,10 +50,6 @@ var jakeChoices = ["test1", "test2", "test3", "test4", "test5"];
   }
 
   });
-
-
-
-//
 
 
 scoreUpdate.innerHTML = gameScore;
