@@ -13,7 +13,7 @@ start.addEventListener('click', function() {
 
   console.log("button working");
 
-  scoreUpdate.textContent = gameScore;
+
 
   var choice = jakeChoices[Math.floor(Math.random() * jakeChoices.length)];
 
@@ -22,7 +22,7 @@ start.addEventListener('click', function() {
 
   function refreshData() {
 
-  x = 3;
+  x = 4;
 
 console.log("works");
 var choice = jakeChoices[Math.floor(Math.random() * jakeChoices.length)];
@@ -34,7 +34,7 @@ happyChoice.textContent = choice;
 
       if (e.key === choice[0]) {
 
-        console.log ("works");
+        console.log ("Add score");
         choice = choice.slice(1);
         happyChoice.textContent = choice;
         gameScore += 10;
@@ -51,25 +51,7 @@ happyChoice.textContent = choice;
 
 refreshData();
 
-  // document.addEventListener('keyup', function(e)  {
-  //
-  //   if (e.key === choice[0]) {
-  //
-  //     console.log ("works");
-  //     choice = choice.slice(1);
-  //     happyChoice.textContent = choice;
-  //     gameScore += 10;
-  //   }
-  //
-  //  else {
-  //
-  //   console.log("deduct score");
-  //   gameScore -= 15;
-  // }
-  //
-  // });
-
-scoreUpdate.textContent = gameScore;
+scoreUpdate.innerHTML = gameScore;
 
 // this function evokes the change of image depending on gameScore
 
