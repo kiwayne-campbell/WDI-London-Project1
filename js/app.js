@@ -20,16 +20,20 @@ start.addEventListener('click', function() {
 
   // setTimeout(function(){ console.log(typeChoices); }, 3000);
 
-//   function refreshData() {
-//
-//        x = 5;
-// console.log("works but not repeating JS");
-//     happyChoice.textContent = choice;
-//
-//     setTimeout(refreshData, x*1000);
-// }
-//
-// refreshData();
+  function refreshData() {
+
+       x = 5;
+
+console.log("works but not repeating JS");
+
+var choice = jakeChoices[Math.floor(Math.random() * jakeChoices.length)];
+
+happyChoice.textContent = choice;
+
+    setTimeout(refreshData, x*1000);
+}
+
+refreshData();
 
 
 //
