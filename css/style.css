@@ -31,6 +31,8 @@ right: 100px;}
 
 .scoreBoard { width: 200px;
   height: 200px;
+  font-size: 100px;
+  text-align: center;
   background-image: url("../images/6q1Hm6M.jpg");
   border: 1px solid black;
   position: absolute;
