@@ -13,18 +13,18 @@ start.addEventListener('click', function() {
   var choice = jakeChoices[Math.floor(Math.random() * jakeChoices.length)];
   happyChoice.textContent = choice;
   scoreUpdate.innerHTML = gameScore;
-  countdown("timer", 2, 0 );
+  countdown("timer", 1, 0 );
 
   document.addEventListener('keyup', function(e)  {
 
     if (e.key === choice[0]) {
       choice = choice.slice(1);
       happyChoice.textContent = choice;
-      gameScore += 20;
+      gameScore += 10;
       scoreUpdate.innerHTML = gameScore;
     }
     else {
-      gameScore -= 10;
+      gameScore -= 20;
       scoreUpdate.innerHTML = gameScore;
     }
 
@@ -58,7 +58,7 @@ function countdown( elementName, minutes, seconds ) {
   function updateTimer() {
       msLeft = endTime - (+new Date());
       if ( msLeft < 1000 ) {
-          element.innerHTML = "Times Up!";
+          element.innerHTML = "";
       } else {
           time = new Date( msLeft );
           hours = time.getUTCHours();
@@ -73,10 +73,13 @@ function countdown( elementName, minutes, seconds ) {
   updateTimer();
 }
 
-
-
 // need to create game win function that makes the game display a win or loose message at end of game - if game is above
 // certain score you win if not you loose - ends when timer reaches zero
+
+
+if ( msLeft < 1000 ) {
+    element.innerHTML = "Times Up!"; }
+
 
 
 // reset button to set game back to original
