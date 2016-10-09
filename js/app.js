@@ -1,18 +1,17 @@
 console.log("alive");
 // we can add music for start but not for now- lets get game funcitoning first
 
-var scoreUpdate = document.getElementById('score');
-var gameScore = 0;
 var jakeChoices = ["test1", "test2", "test3", "test4", "test5"];
 var start = document.getElementById('button');
 var happyChoice = document.getElementById('happyChoice');
 var imageUpdate = document.getElementById('jakeImage');
+var scoreUpdate = document.getElementById('score');
+var gameScore = 0;
 
 
 start.addEventListener('click', function() {
 
   console.log("button working");
-
 
 
   var choice = jakeChoices[Math.floor(Math.random() * jakeChoices.length)];
@@ -38,12 +37,14 @@ happyChoice.textContent = choice;
         choice = choice.slice(1);
         happyChoice.textContent = choice;
         gameScore += 10;
+        scoreUpdate.innerHTML = gameScore;
       }
 
      else {
 
       console.log("deduct score");
       gameScore -= 15;
+      scoreUpdate.innerHTML = gameScore;
     }
 
     });
@@ -51,7 +52,7 @@ happyChoice.textContent = choice;
 
 refreshData();
 
-scoreUpdate.innerHTML = gameScore;
+// scoreUpdate.innerHTML = gameScore;
 
 function countdown( elementName, minutes, seconds ) {
     var element, endTime, hours, mins, msLeft, time;
@@ -79,7 +80,19 @@ function countdown( elementName, minutes, seconds ) {
     updateTimer();
 }
 
-countdown("timer", 1, 5 );
+countdown("timer", 2, 0 );
+
+
+
+// need to create function that makes the game display a win or loose message at end of game - if game is above
+// certain score you win if not you loose - ends when timer reaches zero
+
+
+// need to create a change of pictures for jake/finn depending on score
+
+
+// reset button to set game back to original
+
 
 
 
@@ -91,5 +104,9 @@ countdown("timer", 1, 5 );
 //
 //
 // }
+
+
+
+
 
 });
