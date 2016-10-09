@@ -10,103 +10,73 @@ var gameScore = 0;
 
 
 start.addEventListener('click', function() {
-
-  console.log("button working");
-
-
   var choice = jakeChoices[Math.floor(Math.random() * jakeChoices.length)];
-
   happyChoice.textContent = choice;
+  scoreUpdate.innerHTML = gameScore;
+  countdown("timer", 2, 0 );
 
+  document.addEventListener('keyup', function(e)  {
 
-  function refreshData() {
-
-  x = 4;
-
-console.log("works");
-var choice = jakeChoices[Math.floor(Math.random() * jakeChoices.length)];
-happyChoice.textContent = choice;
-
-    setTimeout(refreshData, x*1000);
-
-    document.addEventListener('keyup', function(e)  {
-
-      if (e.key === choice[0]) {
-
-        console.log ("Add score");
-        choice = choice.slice(1);
-        happyChoice.textContent = choice;
-        gameScore += 10;
-        scoreUpdate.innerHTML = gameScore;
-      }
-
-     else {
-
-      console.log("deduct score");
-      gameScore -= 15;
+    if (e.key === choice[0]) {
+      choice = choice.slice(1);
+      happyChoice.textContent = choice;
+      gameScore += 20;
+      scoreUpdate.innerHTML = gameScore;
+    }
+    else {
+      gameScore -= 10;
       scoreUpdate.innerHTML = gameScore;
     }
 
-    });
-}
+// make image update with new image once score goes above certain level
 
-refreshData();
+    if(gameScore > 50) {
+      imageUpdate.style.backgroundImage = "url(/images/happyjake2.gif)";
+    }
+    else {
+      imageUpdate.style.backgroundImage = "url(/images/sadjake.gif)";
+    }
 
-// scoreUpdate.innerHTML = gameScore;
+    if(choice.length === 0) {
+      choice = jakeChoices[Math.floor(Math.random() * jakeChoices.length)];
+      happyChoice.textContent = choice;
+    }
+  });
+});
+
+
+
+  // my countdown timer
 
 function countdown( elementName, minutes, seconds ) {
-    var element, endTime, hours, mins, msLeft, time;
+  var element, endTime, hours, mins, msLeft, time;
 
-    function twoDigits( n )
-    {
-        return (n <= 9 ? "0" + n : n);
-    }
+  function twoDigits( n ){
+    return (n <= 9 ? "0" + n : n);
+  }
 
-    function updateTimer() {
-        msLeft = endTime - (+new Date());
-        if ( msLeft < 1000 ) {
-            element.innerHTML = "Times Up!";
-        } else {
-            time = new Date( msLeft );
-            hours = time.getUTCHours();
-            mins = time.getUTCMinutes();
-            element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
-            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
-        }
-    }
+  function updateTimer() {
+      msLeft = endTime - (+new Date());
+      if ( msLeft < 1000 ) {
+          element.innerHTML = "Times Up!";
+      } else {
+          time = new Date( msLeft );
+          hours = time.getUTCHours();
+          mins = time.getUTCMinutes();
+          element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+          setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+      }
+  }
 
-    element = document.getElementById("timer");
-    endTime = (+new Date()) + 1000 * (60*minutes + seconds) + 500;
-    updateTimer();
+  element = document.getElementById(elementName);
+  endTime = (+new Date()) + 1000 * (60*minutes + seconds) + 500;
+  updateTimer();
 }
 
-countdown("timer", 2, 0 );
 
 
-
-// need to create function that makes the game display a win or loose message at end of game - if game is above
+// need to create game win function that makes the game display a win or loose message at end of game - if game is above
 // certain score you win if not you loose - ends when timer reaches zero
 
 
-// need to create a change of pictures for jake/finn depending on score
-
-
 // reset button to set game back to original
-
-
-
-
-// this function evokes the change of image depending on gameScore
-
-// if (gameScore > 50) {
-//
-// document.getElementById()
-//
-//
-// }
-
-
-
-
-
-});
