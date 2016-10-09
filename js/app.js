@@ -2,12 +2,14 @@ console.log("alive");
 // we can add music for start but not for now- lets get game funcitoning first
 
 var jakeChoices = ["test1", "test2", "test3", "test4", "test5"];
-var start = document.getElementById('button');
+var start = document.getElementById('start');
 var happyChoice = document.getElementById('happyChoice');
 var imageUpdate = document.getElementById('jakeImage');
 var scoreUpdate = document.getElementById('score');
 var gameScore = 0;
+var resetGame = document.getElementById('restart');
 
+// start game on click
 
 start.addEventListener('click', function() {
   var choice = jakeChoices[Math.floor(Math.random() * jakeChoices.length)];
@@ -46,7 +48,7 @@ start.addEventListener('click', function() {
 
 
 
-  // my countdown timer
+  // my countdown timer - ask Mike how to make less complex
 
 function countdown( elementName, minutes, seconds ) {
   var element, endTime, hours, mins, msLeft, time;
@@ -77,9 +79,13 @@ function countdown( elementName, minutes, seconds ) {
 // certain score you win if not you loose - ends when timer reaches zero
 
 
-if ( msLeft < 1000 ) {
-    element.innerHTML = "Times Up!"; }
-
+// if ( msLeft < 1000 ) {
+//     element.innerHTML = "Times Up!"; }
 
 
 // reset button to set game back to original
+
+resetGame.addEventListener('click', function() {
+  console.log ("button works");
+  document.location.reload(true);
+});
