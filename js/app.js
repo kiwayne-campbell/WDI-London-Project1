@@ -7,6 +7,7 @@ var happyChoice = document.getElementById('happyChoice');
 var imageUpdate = document.getElementById('jakeImage');
 var scoreUpdate = document.getElementById('score');
 var winGame = document.body;
+var loseGame = document.body;
 var gameScore = 0;
 var resetGame = document.getElementById('restart');
 
@@ -66,7 +67,12 @@ function countdown( elementName, minutes, seconds ) {
         console.log("grabbing win image");
         winGame.style.backgroundImage = "url(/images/6q1Hm6M.jpg)";
         }
-          // element.innerHTML = "";
+
+        else if ( msLeft < 0 && gameScore < 50 ) {
+          console.log("grabbing losing image");
+          // winGame.style.backgroundImage = "url(/images/6q1Hm6M.jpg)";
+          }
+
        else {
           time = new Date( msLeft );
           hours = time.getUTCHours();
