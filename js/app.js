@@ -11,6 +11,7 @@ var scoreUpdate = document.getElementById('score');
 var replaceBoard = document.getElementById('resultDisplay');
 var gameScore = 0;
 var resetGame = document.getElementById('restart');
+
 // var decrease = setInterval(function () {
 //     scoreUpdate.innerHTML = gameScore -= 10;
 // }, 1000);
@@ -22,12 +23,14 @@ var resetGame = document.getElementById('restart');
 start.addEventListener('click', function() {
   var choice = jakeChoices[Math.floor(Math.random() * jakeChoices.length)];
   happyChoice.textContent = choice;
+  happyChoice.style.fontSize = "60px";
+  happyChoice.style.lineHeight = "200px";
   scoreUpdate.innerHTML = gameScore;
   imageUpdate.style.display = "block";
   imageUpdate2.style.display = "block";
   scoreUpdate.style.display = "block";
-  start.style.display = "block";
   timerDisplay.style.display = "block";
+  start.style.display = "none";
   countdown("timer", 0.2, 0 );
 
   document.addEventListener('keyup', function(e)  {
@@ -51,7 +54,7 @@ start.addEventListener('click', function() {
       imageUpdate2.style.backgroundImage = "url(/images/happyfinn.gif)";
     }
     else {
-      imageUpdate.style.backgroundImage = "url(/images/sadjake.gif)";
+      imageUpdate.style.backgroundImage = "url(/images/sadjake2.gif)";
       imageUpdate2.style.backgroundImage = "url(/images/frustratedfinn.gif)";
     }
 
