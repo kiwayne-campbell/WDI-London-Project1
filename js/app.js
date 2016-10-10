@@ -8,7 +8,7 @@ var imageUpdate = document.getElementById('jakeImage');
 var scoreUpdate = document.getElementById('score');
 var winGame = document.body;
 var loseGame = document.body;
-var replaceBoard = document.getElementById('winnerDisplay');
+var replaceBoard = document.getElementById('resultDisplay');
 var gameScore = 0;
 var resetGame = document.getElementById('restart');
 
@@ -73,11 +73,8 @@ function countdown( elementName, minutes, seconds ) {
           console.log("grabbing losing image");
           happyChoice.style.display = "none";
           replaceBoard.style.display = "block";
+          replaceBoard.style.backgroundImage = "url(/images/6q1Hm6M.jpg)";
         }
-
-
-          // winGame.style.backgroundImage = "url(/images/6q1Hm6M.jpg)";
-
 
        else {
           time = new Date( msLeft );
@@ -95,20 +92,6 @@ function countdown( elementName, minutes, seconds ) {
 }
 
 });
-
-// need to create game win function that makes the game display a win or loose message at end of game - if game is above
-// certain score you win if not you loose - ends when timer reaches zero. this can probably be put with the timer function
-
-
-// if ( msLeft < 1000 && gameScore > 50) {
-// console.log("grabbing win image");
-// winGame.style.backgroundImage = "url(/images/6q1Hm6M.jpg)";
-// }
-
-
-
-
-
 
 
 // reset button to set game back to original

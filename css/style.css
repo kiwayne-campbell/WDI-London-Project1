@@ -82,7 +82,7 @@ body {
   display: block;
 }
 
-#winnerDisplay {
+#resultDisplay {
   width: 400px;
   height: 300px;
   color: red;
