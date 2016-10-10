@@ -7,8 +7,6 @@ var happyChoice = document.getElementById('happyChoice');
 var imageUpdate = document.getElementById('jakeImage');
 var imageUpdate2 = document.getElementById('finnImage');
 var scoreUpdate = document.getElementById('score');
-var winGame = document.body;
-var loseGame = document.body;
 var replaceBoard = document.getElementById('resultDisplay');
 var gameScore = 0;
 var resetGame = document.getElementById('restart');
@@ -72,6 +70,7 @@ function countdown( elementName, minutes, seconds ) {
         happyChoice.style.display = "none";
         replaceBoard.style.display = "block";
         replaceBoard.style.backgroundImage = "url(/images/jake_the_dog___pure_css_adventure_time_wallpaper_by_sangreprimitiva-d5vs51f.png)";
+        replaceBoard.innerHTML = "Finn made Jake Happy! You win! Yaaaay!";
         }
 
         else if ( msLeft < 0 && gameScore < 50 ) {
@@ -79,6 +78,7 @@ function countdown( elementName, minutes, seconds ) {
           happyChoice.style.display = "none";
           replaceBoard.style.display = "block";
           replaceBoard.style.backgroundImage = "url(/images/Inspirational+wallpaper_f2b046_5473871.jpg)";
+          replaceBoard.innerHTML = "Jake is still sad! Finn lost! Nooo!";
         }
 
        else {
