@@ -20,6 +20,7 @@ start.addEventListener('click', function() {
   document.addEventListener('keyup', function(e)  {
 
     if (e.key === choice[0]) {
+      console.log("works");
       choice = choice.slice(1);
       happyChoice.textContent = choice;
       gameScore += 10;
@@ -44,8 +45,6 @@ start.addEventListener('click', function() {
       happyChoice.textContent = choice;
     }
   });
-});
-
 
 
   // my countdown timer - ask Mike how to make less complex
@@ -74,6 +73,8 @@ function countdown( elementName, minutes, seconds ) {
   endTime = (+new Date()) + 1000 * (60*minutes + seconds) + 500;
   updateTimer();
 }
+
+});
 
 // need to create game win function that makes the game display a win or loose message at end of game - if game is above
 // certain score you win if not you loose - ends when timer reaches zero
