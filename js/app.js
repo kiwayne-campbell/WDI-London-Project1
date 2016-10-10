@@ -9,8 +9,10 @@ var imageUpdate = document.getElementById('jakeImage');
 var imageUpdate2 = document.getElementById('finnImage');
 var scoreUpdate = document.getElementById('score');
 var replaceBoard = document.getElementById('resultDisplay');
-var gameScore = 0;
+var sounds = document.getElementById('adventureSounds');
 var resetGame = document.getElementById('restart');
+var gameScore = 0;
+
 
 // var decrease = setInterval(function () {
 //     scoreUpdate.innerHTML = gameScore -= 10;
@@ -41,6 +43,8 @@ start.addEventListener('click', function() {
       happyChoice.textContent = choice;
       gameScore += 10;
       scoreUpdate.innerHTML = gameScore;
+      sounds.src = "sounds/Sonic Ring Sound Effect_Mh2GQmfN-AI_youtube.mp3";
+      sounds.play();
     }
     else {
       gameScore -= 50;
