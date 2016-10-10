@@ -3,6 +3,7 @@ console.log("alive");
 
 var jakeChoices = ["test1", "test2", "test3", "test4", "test5"];
 var start = document.getElementById('start');
+var timerDisplay = document.getElementById('timer');
 var happyChoice = document.getElementById('happyChoice');
 var imageUpdate = document.getElementById('jakeImage');
 var imageUpdate2 = document.getElementById('finnImage');
@@ -25,6 +26,8 @@ start.addEventListener('click', function() {
   imageUpdate.style.display = "block";
   imageUpdate2.style.display = "block";
   scoreUpdate.style.display = "block";
+  start.style.display = "block";
+  timerDisplay.style.display = "block";
   countdown("timer", 0.2, 0 );
 
   document.addEventListener('keyup', function(e)  {
