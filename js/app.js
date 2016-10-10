@@ -10,6 +10,9 @@ var scoreUpdate = document.getElementById('score');
 var replaceBoard = document.getElementById('resultDisplay');
 var gameScore = 0;
 var resetGame = document.getElementById('restart');
+// var decrease = setInterval(function () {
+//     scoreUpdate.innerHTML = gameScore -= 10;
+// }, 1000);
 
 // start game on click
 
@@ -71,6 +74,7 @@ function countdown( elementName, minutes, seconds ) {
         replaceBoard.style.display = "block";
         replaceBoard.style.backgroundImage = "url(/images/jake_the_dog___pure_css_adventure_time_wallpaper_by_sangreprimitiva-d5vs51f.png)";
         replaceBoard.innerHTML = "Finn made Jake Happy! You win! Yaaaay!";
+        clearInterval(decrease);
         }
 
         else if ( msLeft < 0 && gameScore < 50 ) {
@@ -79,6 +83,7 @@ function countdown( elementName, minutes, seconds ) {
           replaceBoard.style.display = "block";
           replaceBoard.style.backgroundImage = "url(/images/Inspirational+wallpaper_f2b046_5473871.jpg)";
           replaceBoard.innerHTML = "Jake is still sad! Finn lost! Nooo!";
+          clearInterval(decrease);
         }
 
        else {
@@ -87,6 +92,11 @@ function countdown( elementName, minutes, seconds ) {
           mins = time.getUTCMinutes();
           element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
           setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+
+          // need to fix interval function- taking away too much but works with everything else
+
+          // decrease();
+
       }
 }
 

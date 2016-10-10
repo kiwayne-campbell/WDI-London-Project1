@@ -46,6 +46,7 @@ body {
   height: 200px;
   font-size: 100px;
   border: 3px solid red;
+  background-color: white;
   border-radius: 10px;
   color: red;
   font-family: 'Gloria Hallelujah', cursive;
@@ -64,10 +65,10 @@ body {
   font-family: 'Gloria Hallelujah', cursive;
   text-align: center;
   line-height: 0.8em;
-  border: 1px solid black;
   position: absolute;
   top: 450px;
   right: 100px;
+  z-index: 1;
 }
 
 
@@ -111,6 +112,7 @@ button {
   position: absolute;
   top: 500px;
   left:550px;
+  display: block;
 }
 
 #restart {
@@ -118,13 +120,13 @@ margin-left: 100px;
 
 }
 
-#hidden {
+/*#hidden {
 display: none;
 }
 
 #visible {
 display: block;
-}
+}*/
 
 /*#logo {
   border: 1px solid black;
