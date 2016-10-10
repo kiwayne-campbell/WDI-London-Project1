@@ -14,12 +14,17 @@ var resetGame = document.getElementById('restart');
 //     scoreUpdate.innerHTML = gameScore -= 10;
 // }, 1000);
 
+
+
 // start game on click
 
 start.addEventListener('click', function() {
   var choice = jakeChoices[Math.floor(Math.random() * jakeChoices.length)];
   happyChoice.textContent = choice;
   scoreUpdate.innerHTML = gameScore;
+  imageUpdate.style.display = "block";
+  imageUpdate2.style.display = "block";
+  scoreUpdate.style.display = "block";
   countdown("timer", 0.2, 0 );
 
   document.addEventListener('keyup', function(e)  {

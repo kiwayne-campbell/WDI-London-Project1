@@ -25,6 +25,7 @@ body {
   right: 100px;
   background-size: cover;
   background-position: center;
+  display: none;
 }
 
 
@@ -39,6 +40,7 @@ body {
   left: 100px;
   background-size: cover;
   background-position: center;
+  display: none;
 }
 
 #score {
@@ -53,6 +55,7 @@ body {
   text-align: center;
   line-height: 0.8em;
   position: absolute;
+  display: none;
   top: 350px;
   right: 100px;
 }
@@ -68,6 +71,7 @@ body {
   position: absolute;
   top: 450px;
   right: 100px;
+  display: none;
   z-index: 1;
 }
 
