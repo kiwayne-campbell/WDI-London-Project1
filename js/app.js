@@ -6,6 +6,7 @@ var start = document.getElementById('start');
 var happyChoice = document.getElementById('happyChoice');
 var imageUpdate = document.getElementById('jakeImage');
 var scoreUpdate = document.getElementById('score');
+var winGame = document.body;
 var gameScore = 0;
 var resetGame = document.getElementById('restart');
 
@@ -15,7 +16,7 @@ start.addEventListener('click', function() {
   var choice = jakeChoices[Math.floor(Math.random() * jakeChoices.length)];
   happyChoice.textContent = choice;
   scoreUpdate.innerHTML = gameScore;
-  countdown("timer", 1, 0 );
+  countdown("timer", 0.5, 0 );
 
   document.addEventListener('keyup', function(e)  {
 
@@ -27,7 +28,7 @@ start.addEventListener('click', function() {
       scoreUpdate.innerHTML = gameScore;
     }
     else {
-      gameScore -= 20;
+      gameScore -= 50;
       scoreUpdate.innerHTML = gameScore;
     }
 
@@ -58,9 +59,15 @@ function countdown( elementName, minutes, seconds ) {
 
   function updateTimer() {
       msLeft = endTime - (+new Date());
-      if ( msLeft < 1000 ) {
-          element.innerHTML = "";
-      } else {
+
+// add game win function here -  first part is working
+
+      if ( msLeft < 0 && gameScore > 50 ) {
+        console.log("grabbing win image");
+        winGame.style.backgroundImage = "url(/images/6q1Hm6M.jpg)";
+        }
+          // element.innerHTML = "";
+       else {
           time = new Date( msLeft );
           hours = time.getUTCHours();
           mins = time.getUTCMinutes();
@@ -77,11 +84,18 @@ function countdown( elementName, minutes, seconds ) {
 });
 
 // need to create game win function that makes the game display a win or loose message at end of game - if game is above
-// certain score you win if not you loose - ends when timer reaches zero
+// certain score you win if not you loose - ends when timer reaches zero. this can probably be put with the timer function
 
 
-// if ( msLeft < 1000 ) {
-//     element.innerHTML = "Times Up!"; }
+// if ( msLeft < 1000 && gameScore > 50) {
+// console.log("grabbing win image");
+// winGame.style.backgroundImage = "url(/images/6q1Hm6M.jpg)";
+// }
+
+
+
+
+
 
 
 // reset button to set game back to original
