@@ -8,6 +8,7 @@ var imageUpdate = document.getElementById('jakeImage');
 var scoreUpdate = document.getElementById('score');
 var winGame = document.body;
 var loseGame = document.body;
+var replaceBoard = document.getElementById('winnerDisplay');
 var gameScore = 0;
 var resetGame = document.getElementById('restart');
 
@@ -61,7 +62,7 @@ function countdown( elementName, minutes, seconds ) {
   function updateTimer() {
       msLeft = endTime - (+new Date());
 
-// add game win function here -  first part is working
+// add game win function here
 
       if ( msLeft < 0 && gameScore > 50 ) {
         console.log("grabbing win image");
@@ -70,8 +71,13 @@ function countdown( elementName, minutes, seconds ) {
 
         else if ( msLeft < 0 && gameScore < 50 ) {
           console.log("grabbing losing image");
+          happyChoice.style.display = "none";
+          replaceBoard.style.display = "block";
+        }
+
+
           // winGame.style.backgroundImage = "url(/images/6q1Hm6M.jpg)";
-          }
+
 
        else {
           time = new Date( msLeft );
@@ -80,11 +86,12 @@ function countdown( elementName, minutes, seconds ) {
           element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
           setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
       }
-  }
+}
 
   element = document.getElementById(elementName);
   endTime = (+new Date()) + 1000 * (60*minutes + seconds) + 500;
   updateTimer();
+
 }
 
 });
