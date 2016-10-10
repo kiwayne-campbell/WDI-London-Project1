@@ -17,7 +17,7 @@ start.addEventListener('click', function() {
   var choice = jakeChoices[Math.floor(Math.random() * jakeChoices.length)];
   happyChoice.textContent = choice;
   scoreUpdate.innerHTML = gameScore;
-  countdown("timer", 0.5, 0 );
+  countdown("timer", 0.2, 0 );
 
   document.addEventListener('keyup', function(e)  {
 
