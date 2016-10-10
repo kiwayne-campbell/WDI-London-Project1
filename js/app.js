@@ -5,6 +5,7 @@ var jakeChoices = ["test1", "test2", "test3", "test4", "test5"];
 var start = document.getElementById('start');
 var happyChoice = document.getElementById('happyChoice');
 var imageUpdate = document.getElementById('jakeImage');
+var imageUpdate2 = document.getElementById('finnImage');
 var scoreUpdate = document.getElementById('score');
 var winGame = document.body;
 var loseGame = document.body;
@@ -38,9 +39,11 @@ start.addEventListener('click', function() {
 
     if(gameScore > 50) {
       imageUpdate.style.backgroundImage = "url(/images/happyjake2.gif)";
+      imageUpdate2.style.backgroundImage = "url(/images/happyfinn.gif)";
     }
     else {
       imageUpdate.style.backgroundImage = "url(/images/sadjake.gif)";
+      imageUpdate2.style.backgroundImage = "url(/images/frustratedfinn.gif)";
     }
 
     if(choice.length === 0) {
@@ -66,14 +69,16 @@ function countdown( elementName, minutes, seconds ) {
 
       if ( msLeft < 0 && gameScore > 50 ) {
         console.log("grabbing win image");
-        winGame.style.backgroundImage = "url(/images/6q1Hm6M.jpg)";
+        happyChoice.style.display = "none";
+        replaceBoard.style.display = "block";
+        replaceBoard.style.backgroundImage = "url(/images/jake_the_dog___pure_css_adventure_time_wallpaper_by_sangreprimitiva-d5vs51f.png)";
         }
 
         else if ( msLeft < 0 && gameScore < 50 ) {
           console.log("grabbing losing image");
           happyChoice.style.display = "none";
           replaceBoard.style.display = "block";
-          replaceBoard.style.backgroundImage = "url(/images/6q1Hm6M.jpg)";
+          replaceBoard.style.backgroundImage = "url(/images/Inspirational+wallpaper_f2b046_5473871.jpg)";
         }
 
        else {
