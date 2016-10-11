@@ -79,7 +79,7 @@ body {
 #happyChoice {
   width: 400px;
   height: 200px;
-  color: red;
+  color: yellow;
   border: 3px solid red;
   border-radius: 10px;
   position: absolute;
@@ -91,7 +91,7 @@ body {
   top: 250px;
   right: 500px;
   display: block;
-  background-color: white;
+  background-color: black;
 }
 
 #resultDisplay {

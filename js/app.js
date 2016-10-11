@@ -1,7 +1,7 @@
 console.log("alive");
 // we can add music for start but not for now- lets get game funcitoning first
 
-var jakeChoices = ["test1", "test2", "test3", "test4", "test5"];
+var jakeChoices = ["pancakes", "lady rainicorn", "pancakes", "test4", "test5"];
 var start = document.getElementById('start');
 var timerDisplay = document.getElementById('timer');
 var happyChoice = document.getElementById('happyChoice');
@@ -9,7 +9,8 @@ var imageUpdate = document.getElementById('jakeImage');
 var imageUpdate2 = document.getElementById('finnImage');
 var scoreUpdate = document.getElementById('score');
 var replaceBoard = document.getElementById('resultDisplay');
-var sounds = document.getElementById('adventureSounds');
+// var sounds = document.getElementById('adventureSounds');
+var sounds = new Audio ("/Sonic Ring Sound Effect_Mh2GQmfN-AI_youtube.mp3");
 var resetGame = document.getElementById('restart');
 var gameScore = 0;
 
@@ -35,6 +36,7 @@ start.addEventListener('click', function() {
   start.style.display = "none";
   countdown("timer", 0.2, 0 );
 
+
   document.addEventListener('keyup', function(e)  {
 
     if (e.key === choice[0]) {
@@ -43,7 +45,7 @@ start.addEventListener('click', function() {
       happyChoice.textContent = choice;
       gameScore += 10;
       scoreUpdate.innerHTML = gameScore;
-      sounds.src = "sounds/Sonic Ring Sound Effect_Mh2GQmfN-AI_youtube.mp3";
+      // sounds.src = "/Sonic Ring Sound Effect_Mh2GQmfN-AI_youtube.mp3";
       sounds.play();
     }
     else {
