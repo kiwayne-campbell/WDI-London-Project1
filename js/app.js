@@ -8,17 +8,16 @@ var imageUpdate2 = document.getElementById('finnImage');
 var scoreUpdate = document.getElementById('score');
 var replaceBoard = document.getElementById('resultDisplay');
 var adventureSounds = document.getElementById('adventureSounds');
+var soundsBackground = document.getElementById('soundsBackground');
 var resetGame = document.getElementById('restart');
 var gameScore = 0;
 var isPlaying = false;
 
 // add function to dcrease score - not sure if corrcet place but works for now
 var decrease = setInterval(function () {
-  gameScore -= 10;
+  gameScore -= 20;
   scoreUpdate.innerHTML = gameScore;
 }, 1400);
-
-
 
 // start game on click
 
@@ -35,6 +34,8 @@ start.addEventListener('click', function() {
   timerDisplay.style.display = "block";
   start.style.display = "none";
   countdown("timer", 1, 0 );
+  soundsBackground.play();
+  soundsBackground.loop = true;
 
 
   document.addEventListener('keyup', function(e)  {
@@ -71,7 +72,6 @@ start.addEventListener('click', function() {
       happyChoice.textContent = choice;
     }
   });
-
 
   // my countdown timer - make less complex?
 
