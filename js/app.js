@@ -10,14 +10,14 @@ var imageUpdate2 = document.getElementById('finnImage');
 var scoreUpdate = document.getElementById('score');
 var replaceBoard = document.getElementById('resultDisplay');
 // var sounds = document.getElementById('adventureSounds');
-var sounds = new Audio ("/Sonic Ring Sound Effect_Mh2GQmfN-AI_youtube.mp3");
+// var sounds = new Audio ("/Sonic Ring Sound Effect_Mh2GQmfN-AI_youtube.mp3");
 var resetGame = document.getElementById('restart');
 var gameScore = 0;
 
-
-// var decrease = setInterval(function () {
-//     scoreUpdate.innerHTML = gameScore -= 10;
-// }, 1000);
+var decrease = setInterval(function () {
+    gameScore -= 10;
+    scoreUpdate.innerHTML = gameScore;
+}, 1000);
 
 
 
@@ -46,7 +46,7 @@ start.addEventListener('click', function() {
       gameScore += 5;
       scoreUpdate.innerHTML = gameScore;
       // sounds.src = "/Sonic Ring Sound Effect_Mh2GQmfN-AI_youtube.mp3";
-      sounds.play();
+      // sounds.play();
     }
     else {
       gameScore -= 60;

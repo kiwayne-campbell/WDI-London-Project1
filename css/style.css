@@ -17,8 +17,9 @@ body {
 #finnImage {
   width: 260px;
   height: 200px;
-  border: 3px solid red;
+  border: 5px solid red;
   border-radius: 10px;
+  /*border-image: url("http://orig12.deviantart.net/ee19/f/2012/097/0/9/adventure_time_animated_finn_face_by_wirecrossing-d4vdjtn.gif");*/
   background-image: url("../images/frustratedfinn.gif");
   position: absolute;
   top: 200px;
@@ -29,7 +30,7 @@ body {
 }
 
 #jakeImage {
-  border: 3px solid red;
+  border: 5px solid red;
   border-radius: 10px;
   height: 200px;
   width: 250px;
@@ -48,7 +49,7 @@ body {
   width: 250px;
   height: 200px;
   font-size: 100px;
-  border: 3px solid red;
+  border: 5px solid red;
   background-color: white;
   border-radius: 10px;
   color: red;
@@ -81,7 +82,7 @@ body {
   width: 430px;
   height: 200px;
   color: yellow;
-  border: 3px solid red;
+  border: 3px solid yellow;
   border-radius: 10px;
   position: absolute;
   font-size: 20px;
