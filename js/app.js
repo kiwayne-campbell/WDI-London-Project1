@@ -1,7 +1,7 @@
 console.log("alive");
 // we can add music for start but not for now- lets get game funcitoning first
 
-var jakeChoices = ["pancakes", "lady rainicorn", "pancakes", "test4", "test5"];
+var jakeChoices = ["pancakes", "lady rainicorn", "sandwich", "beautopia", "pie"];
 var start = document.getElementById('start');
 var timerDisplay = document.getElementById('timer');
 var happyChoice = document.getElementById('happyChoice');
@@ -43,13 +43,13 @@ start.addEventListener('click', function() {
       console.log("works");
       choice = choice.slice(1);
       happyChoice.textContent = choice;
-      gameScore += 10;
+      gameScore += 5;
       scoreUpdate.innerHTML = gameScore;
       // sounds.src = "/Sonic Ring Sound Effect_Mh2GQmfN-AI_youtube.mp3";
       sounds.play();
     }
     else {
-      gameScore -= 50;
+      gameScore -= 60;
       scoreUpdate.innerHTML = gameScore;
     }
 
