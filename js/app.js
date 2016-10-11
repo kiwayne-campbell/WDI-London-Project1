@@ -1,5 +1,3 @@
-console.log("alive");
-// we can add music for start but not for now- lets get game funcitoning first
 
 var jakeChoices = ["pancakes", "lady rainicorn", "sandwich", "beautopia", "pie", "adventure", "finn", "coffee", "burgers", "viola"];
 var start = document.getElementById('start');
@@ -10,10 +8,10 @@ var imageUpdate2 = document.getElementById('finnImage');
 var scoreUpdate = document.getElementById('score');
 var replaceBoard = document.getElementById('resultDisplay');
 // var sounds = document.getElementById('adventureSounds');
-// var sounds = new Audio ("/Sonic Ring Sound Effect_Mh2GQmfN-AI_youtube.mp3");
 var resetGame = document.getElementById('restart');
 var gameScore = 0;
 
+// add function to dcrease score - not sure if corrcet place but works for now
 var decrease = setInterval(function () {
     gameScore -= 10;
     scoreUpdate.innerHTML = gameScore;
@@ -67,20 +65,20 @@ start.addEventListener('click', function() {
     if(choice.length === 0) {
       choice = jakeChoices[Math.floor(Math.random() * jakeChoices.length)];
       happyChoice.textContent = choice;
+      }
+    });
+
+
+  // my countdown timer - make less complex?
+
+    function countdown( elementName, minutes, seconds ) {
+      var element, endTime, hours, mins, msLeft, time;
+
+    function twoDigits( n ){
+      return (n <= 9 ? "0" + n : n);
     }
-  });
 
-
-  // my countdown timer - ask Mike how to make less complex
-
-function countdown( elementName, minutes, seconds ) {
-  var element, endTime, hours, mins, msLeft, time;
-
-  function twoDigits( n ){
-    return (n <= 9 ? "0" + n : n);
-  }
-
-  function updateTimer() {
+    function updateTimer() {
       msLeft = endTime - (+new Date());
 
 // add game win function here
@@ -109,22 +107,14 @@ function countdown( elementName, minutes, seconds ) {
           mins = time.getUTCMinutes();
           element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
           setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+          }
+        }
 
-          // need to fix interval function- taking away too much but works with everything else
-
-          // decrease();
-
+      element = document.getElementById(elementName);
+      endTime = (+new Date()) + 1000 * (60*minutes + seconds) + 500;
+      updateTimer();
       }
-}
-
-  element = document.getElementById(elementName);
-  endTime = (+new Date()) + 1000 * (60*minutes + seconds) + 500;
-  updateTimer();
-
-}
-
-});
-
+    });
 
 // reset button to set game back to original
 
