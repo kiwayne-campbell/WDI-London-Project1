@@ -15,7 +15,7 @@ var isPlaying = false;
 
 // add function to dcrease score - not sure if corrcet place but works for now
 var decrease = setInterval(function () {
-  gameScore -= 20;
+  gameScore -= 15;
   scoreUpdate.innerHTML = gameScore;
 }, 1400);
 
