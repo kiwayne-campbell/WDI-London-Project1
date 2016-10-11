@@ -1,7 +1,9 @@
 body {
-  background-image: url("../images/adventure_time_simple_background_by_joshiepup-d6paspv.png");
+  background-image: url("../images/adventure-time-finn-and-jake.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position:center;
+  background-position-y: 35%;
 
 }
 
@@ -16,7 +18,7 @@ body {
   border: 3px solid red;
   border-radius: 10px;
   height: 200px;
-  width: 200px;
+  width: 220px;
   background-image: url("../images/sadjake2.gif");
   background-repeat: no-repeat;
   background-size: cover;
@@ -30,13 +32,13 @@ body {
 
 
 #finnImage {
-  width: 250px;
+  width: 260px;
   height: 200px;
   border: 3px solid red;
   border-radius: 10px;
   background-image: url("../images/frustratedfinn.gif");
   position: absolute;
-  top: 300px;
+  top: 200px;
   left: 100px;
   background-size: cover;
   background-position: center;
@@ -44,7 +46,7 @@ body {
 }
 
 #score {
-  width: 200px;
+  width: 220px;
   height: 200px;
   font-size: 100px;
   border: 3px solid red;
