@@ -1,5 +1,5 @@
 
-var jakeChoices = ["pancakes", "lady rainicorn", "time sandwich", "beautopia", "pie", "adventure", "finn", "coffee", "burgers", "viola", "magical", "ice cream", "burrito", "lobster soul", "korean food"];
+var jakeChoices = ["pancakes", "lady rainicorn", "time sandwich", "beautopia", "pie", "adventure", "finn", "coffee", "burgers", "viola", "magical", "ice cream", "burrito", "lobster soul", "korean food", "karate chop", "sledge time"];
 var start = document.getElementById('start');
 var timerDisplay = document.getElementById('timer');
 var happyChoice = document.getElementById('happyChoice');
@@ -13,13 +13,12 @@ var resetGame = document.getElementById('restart');
 var gameScore = 0;
 var isPlaying = false;
 
-// add function to dcrease score - not sure if corrcet place but works for now
+// add function to dcrease score as time counts down -  had to add tiny delay to account
 var decrease = setInterval(function () {
-  gameScore -= 15;
-  scoreUpdate.innerHTML = gameScore;
-}, 1400);
+  gameScore -= 10;
+  scoreUpdate.innerHTML = gameScore;}, 1400);
 
-// start game on click
+// start game on click & execute necessary elements & styling
 
 start.addEventListener('click', function() {
   isPlaying = true;
@@ -43,7 +42,6 @@ start.addEventListener('click', function() {
     if(!isPlaying) return false;
 
     if (String.fromCharCode(e.keyCode).toLowerCase() === choice[0]) {
-      console.log("works");
       choice = choice.slice(1);
       happyChoice.textContent = choice;
       gameScore += 5;
@@ -54,7 +52,7 @@ start.addEventListener('click', function() {
       scoreUpdate.innerHTML = gameScore;
     }
 
-// make image update with new image once score goes above certain level
+// make image update with new image once score goes above certain level & add sound effects and shuffle pattern
 
     if(gameScore > 100) {
       imageUpdate.style.backgroundImage = "url(/images/happyjake2.gif)";
@@ -75,17 +73,18 @@ start.addEventListener('click', function() {
 
   // my countdown timer - make less complex?
 
-    function countdown( elementName, minutes, seconds ) {
+    function countdown (elementName, minutes, seconds ) {
       var element, endTime, hours, mins, msLeft, time;
 
     function twoDigits( n ){
       return (n <= 9 ? "0" + n : n);
-    }
+      }
 
     function updateTimer() {
       msLeft = endTime - (+new Date());
 
-// add game win function here
+// add game win function here as based on countdown timer reaching 0. should show win or lose message
+
       if(msLeft < 0) {
         happyChoice.style.display = "none";
         replaceBoard.style.display = "block";
@@ -114,7 +113,7 @@ start.addEventListener('click', function() {
   }
 });
 
-// reset button to set game back to original
+// reset button to set game back to original state
 
 resetGame.addEventListener('click', function() {
   console.log ("button works");
