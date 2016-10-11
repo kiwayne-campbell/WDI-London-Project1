@@ -78,7 +78,7 @@ body {
 
 
 #happyChoice {
-  width: 430px;
+  width: 450px;
   height: 250px;
   color: yellow;
   border: 3px solid yellow;
@@ -90,7 +90,7 @@ body {
   vertical-align: middle;
   line-height: 30px;
   top: 250px;
-  right: 500px;
+  right: 450px;
   display: block;
   background-color: black;
 }
@@ -137,23 +137,3 @@ button {
 margin-left: 16px;
 margin-top: 45px;
 }
-
-/*#hidden {
-display: none;
-}
-
-#visible {
-display: block;
-}*/
-
-/*#logo {
-  border: 1px solid black;
-  height: 200px;
-  width: 800px;
-  background-image: url("../images/cropped-adventure_time_logo.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  top: 10px;
-  left: 250px;
-}*/

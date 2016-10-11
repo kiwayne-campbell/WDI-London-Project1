@@ -1,5 +1,5 @@
 
-var jakeChoices = ["pancakes", "lady rainicorn", "sandwich", "beautopia", "pie", "adventure", "finn", "coffee", "burgers", "viola"];
+var jakeChoices = ["pancakes", "lady rainicorn", "sandwich", "beautopia", "pie", "adventure", "finn", "coffee", "burgers", "viola", "magical", "ice cream", "burrito", "lobster soul"];
 var start = document.getElementById('start');
 var timerDisplay = document.getElementById('timer');
 var happyChoice = document.getElementById('happyChoice');
@@ -43,7 +43,7 @@ start.addEventListener('click', function() {
       happyChoice.textContent = choice;
       gameScore += 5;
       scoreUpdate.innerHTML = gameScore;
-      // sounds.src = "/Sonic Ring Sound Effect_Mh2GQmfN-AI_youtube.mp3";
+      // sounds.src = "https://upload.wikimedia.org/wikipedia/commons/e/ef/Eastern_Whipbird.ogg";
       // sounds.play();
     }
     else {
