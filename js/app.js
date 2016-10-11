@@ -50,7 +50,7 @@ start.addEventListener('click', function() {
       scoreUpdate.innerHTML = gameScore;
     }
     else {
-      gameScore -= 50;
+      gameScore -= 100;
       scoreUpdate.innerHTML = gameScore;
     }
 
