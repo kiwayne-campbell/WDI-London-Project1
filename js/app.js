@@ -1,7 +1,7 @@
 console.log("alive");
 // we can add music for start but not for now- lets get game funcitoning first
 
-var jakeChoices = ["pancakes", "lady rainicorn", "sandwich", "beautopia", "pie"];
+var jakeChoices = ["pancakes", "lady rainicorn", "sandwich", "beautopia", "pie", "adventure", "finn", "coffee", "burgers", "viola"];
 var start = document.getElementById('start');
 var timerDisplay = document.getElementById('timer');
 var happyChoice = document.getElementById('happyChoice');
@@ -34,7 +34,7 @@ start.addEventListener('click', function() {
   scoreUpdate.style.display = "block";
   timerDisplay.style.display = "block";
   start.style.display = "none";
-  countdown("timer", 0.2, 0 );
+  countdown("timer", 1, 0 );
 
 
   document.addEventListener('keyup', function(e)  {
@@ -49,7 +49,7 @@ start.addEventListener('click', function() {
       // sounds.play();
     }
     else {
-      gameScore -= 60;
+      gameScore -= 100;
       scoreUpdate.innerHTML = gameScore;
     }
 
