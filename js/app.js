@@ -1,5 +1,5 @@
 
-var jakeChoices = ["pancakes", "lady rainicorn", "time sandwich", "beautopia", "pie", "adventure", "finn", "coffee", "burgers", "bxhjkcblds", "magical", "ice cream", "burrito", "lobster soul", "korean food", "karate chop", "sledge time", "xhsbfjdihdsap"];
+var jakeChoices = ["flish flog", "lady rainicorn", "time sandwich", "beautopia", "pie", "adventure", "finn", "qwtuozbclsa", "burgers", "bxhjkcblds", "plmsqxuefhks", "ice cream", "burrito", "lobster soul", "korean food", "karate chop", "sledge time", "xhsbfjdihdsap"];
 var start = document.getElementById('start');
 var timerDisplay = document.getElementById('timer');
 var happyChoice = document.getElementById('happyChoice');
