@@ -6,19 +6,17 @@ First Project - based on creating a small game
 Installation Instructions
 -------------------------
 
-Game is hosted on Heroku at this url:
+Game is hosted on Heroku. Play the game [here](https://fathomless-plateau-46780.herokuapp.com/)
 
-https://fathomless-plateau-46780.herokuapp.com/
-
-Based on adventure time with Finn & Jake
+Based on Adventure Time with Finn & Jake
 
 
 Technologies:
 -------------
 
-HTML
-CSS
-JAVASCRIPT
+* HTML
+* CSS
+* JAVASCRIPT
 
 Methodology:
 -----------
