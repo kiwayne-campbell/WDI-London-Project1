@@ -6,7 +6,7 @@ First Project - based on creating a small game
 Installation Instructions
 -------------------------
 
-Game is hosted on Heroku. Play the game [here](https://fathomless-plateau-46780.herokuapp.com/)
+Game is hosted on Heroku. Play the game [here](https://adventure-time-typegame.herokuapp.com/)
 
 Based on Adventure Time with Finn & Jake
 
