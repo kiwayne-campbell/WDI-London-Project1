@@ -25,7 +25,7 @@ Used trello to keep a map of what I wanted to do, but mainly stuck to using note
 
 As we had 4 days I set one day to get the idea, two days for working on logic (hardest part) and workings of the game and then one day for styling and one day to to do final tidy up and iron out bugs and solve bonus things I wanted in the game.
 
-In order to get the game up and running, i created psuedo code as to what I wnated the game to do.
+In order to get the game up and running, i created psuedo code as to what I wanted the game to do.
 
 This consisted of:
 
